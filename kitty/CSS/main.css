@@ -73,18 +73,7 @@ ul {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -119,11 +108,12 @@ article {
 }
 
 #back {
-	background-image:
-		url(../img/47829-himmel-hintergrundbilder-1920x1080-4k.jpg);
+  background-image: url("../catPic.jpg");
+	/*background-image:
+    url(../img/47829-himmel-hintergrundbilder-1920x1080-4k.jpg);
 	background-position: center;
 	background-size: 100%;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 }
 
 #adr {
@@ -208,4 +198,3 @@ article {
     height: 250px;  
     
 }
-

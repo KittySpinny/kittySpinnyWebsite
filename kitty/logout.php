@@ -22,26 +22,6 @@
 <?php
 session_start();
 session_destroy();
- 
-echo "
-
-
-<body>
-       
-
-        <div id=\"mynav\" class=\"nav\">
-            <ul>
-                <li><a  class=\"active\" href=\"./login.php\">Home</a></li>
-                <li><a href=\"./cat.php\">Select cat</a></li>
-                <li><a href=\"./week.php\">This week</a></li>
-                <li><a href=\"./year.php\">This year</a></li>
-                <li><a href=\"./total.php\">Total</a></li>
-                <li><a href=\"./about.html\">About</a></li>
-              </ul> 
-              </div>
-        <h3> Logout successfull </h3>
-   
-</body>                  
-";
-header("location:./login.php");
+$_SESSION['loggedIn'] = 'false';  
+header("location:./main.php");
 ?>

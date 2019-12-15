@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('navbar.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,51 +18,9 @@
 <script type="text/javascript" src="js/moment.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/Chart.min.js"></script>
-
-
-
 </head>
-<?php
-//check if logged in
-session_start();
-if(!isset($_SESSION['userid'])) {
-    die('
-
-
-    <body>
-           
-    
-            <div id="mynav" class="nav">
-                <ul>
-                    <li><a href="./login.php">Home</a></li>
-                    <li><a href="./cat.php">Select cat</a></li>
-                    <li><a class="active" href="./week.php">This week</a></li>
-                    <li><a href="./year.php">This year</a></li>
-                    <li><a href="./total.php">Total</a></li>
-                    <li><a href="./about.html">About</a></li>
-                  </ul> 
-                  </div>
-            <h3> Please <a href="login.php">login</a> </h3>
-       
-    </body>                  
-    ');
-}
- 
-
-?>
 
 <body>
-
-        <div id="mynav" class="nav">
-            <ul>
-                <li><a href="./login.php">Home</a></li>
-                <li><a href="./cat.php">Select cat</a></li>
-                <li><a class="active" href="./week.php">This week</a></li>
-                <li><a href="./year.php">This year</a></li>
-                <li><a href="./total.php">Total</a></li>
-                <li><a href="./about.html">About</a></li>
-              </ul> 
-              </div>
     <div class="main" id ="main">
         
 

@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('navbar.php')
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,51 +22,8 @@
 
 
 </head>
-<?php
-//check if logged in
-session_start();
-if(!isset($_SESSION['userid'])) {
-    die('
-
-
-    <body>
-           
-    
-            <div id="mynav" class="nav">
-                <ul>
-                    <li><a href="./login.php">Home</a></li>
-                    <li><a href="./cat.php">Select cat</a></li>
-                    <li><a href="./week.php">This week</a></li>
-                    <li><a class="active" href="./year.php">This year</a></li>
-                    <li><a href="./total.php">Total</a></li>
-                    <li><a href="./about.html">About</a></li>
-                  </ul> 
-                  </div>
-            <h3> Please <a href="login.php">login</a> </h3>
-       
-    </body>                  
-    ');
-}
- 
-
-?>
-
-<body>
-
-        <div id="mynav" class="nav">
-            <ul>
-                <li><a href="./login.php">Home</a></li>
-                <li><a href="./cat.php">Select cat</a></li>
-                <li><a href="./week.php">This week</a></li>
-                <li><a class="active" href="./year.php">This year</a></li>
-                <li><a href="./total.php">Total</a></li>
-                <li><a href="./about.html">About</a></li>
-              </ul> 
-              </div>
-    <div class="main" id ="main">
-        
-
-    
+<body>  
+<div class="main" id ="main">
          <div id=distance> </div>
          <div id=time> </div>
          <div id=speed> </div>
@@ -71,9 +32,11 @@ if(!isset($_SESSION['userid'])) {
    
     
     
-    <div class="chart-container" >
-        <canvas id="graphCanvas"></canvas>
-    </div>
+         <div class="chartWrapper">
+            <div class="chartAreaWrapper">
+                 <canvas id="graphCanvas"></canvas>
+            </div>
+        </div>    
 </div>
    
     <script>
@@ -223,7 +186,7 @@ if(!isset($_SESSION['userid'])) {
                             showTooltips: true,
                             title: {
                                 display: true,
-                                text: 'This Week'
+                                text: 'This Year'
                             },
 							
 							scales: {

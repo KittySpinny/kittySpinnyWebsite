@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('navbar.php')
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,51 +25,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.6.6/chartjs-plugin-zoom.min.js"></script>
-
-
-
 </head>
-<?php
-//check if logged in
-session_start();
-if(!isset($_SESSION['userid'])) {
-    die('
 
-
-    <body>
-           
-    
-            <div id="mynav" class="nav">
-                <ul>
-                    <li><a href="./login.php">Home</a></li>
-                    <li><a href="./cat.php">Select cat</a></li>
-                    <li><a href="./week.php">This week</a></li>
-                    <li><a href="./year.php">This year</a></li>
-                    <li><a class="active" href="./total.php">Total</a></li>
-                    <li><a href="./about.html">About</a></li>
-                  </ul> 
-                  </div>
-            <h3> Please <a href="login.php">login</a> </h3>
-       
-    </body>                  
-    ');
-}
- 
-
-?>
 
 <body>
-
-        <div id="mynav" class="nav">
-            <ul>
-                <li><a href="./login.php">Home</a></li>
-                <li><a href="./cat.php">Select cat</a></li>
-                <li><a href="./week.php">This week</a></li>
-                <li><a href="./year.php">This year</a></li>
-                <li><a class="active" href="./total.php">Total</a></li>
-                <li><a href="./about.html">About</a></li>
-              </ul> 
-              </div>
     <div class="main" id ="main">
         
 
@@ -216,7 +180,7 @@ if(!isset($_SESSION['userid'])) {
                             showTooltips: true,
                             title: {
                                 display: true,
-                                text: 'This Week'
+                                text: 'Total'
                             },
                             
                             
