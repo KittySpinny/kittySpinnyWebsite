@@ -1,3 +1,7 @@
+<!--
+  Main page of kittySpinny website, includes some information about future projects and resources
+-->
+
 <!doctype html>
 <html>
 <?php
@@ -32,42 +36,7 @@ include('navbar.php');
 </head>
 
 <body>
-  <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class="img-fluid" src="img\cat1.jpg" alt="Image">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img class="img-fluid" src="img\cat3.jpg" alt="Image">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-    </div>
-
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>-->
-
   <div class="container text-center">
-
     <div class="jumbotron">
       <h1>KittySpinny</h1>
       <p></p>

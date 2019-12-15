@@ -1,3 +1,6 @@
+<!--
+  Displays all data for both cats in one table
+-->
 <?php
 session_start();
 include('navbar.php')
@@ -6,7 +9,6 @@ include('navbar.php')
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>KittySpinny</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +25,6 @@ include('navbar.php')
     <table class="table" id="cattable">
       <thead>
         <tr>
-          
           <th>Revolutions</th>
           <th>Start Date</th>
           <th>End Date</th>
@@ -31,52 +32,42 @@ include('navbar.php')
         </tr>
       </thead>
       <tbody>
-
           <?php
-              $servername = "localhost";
-              $username = "testuser";
-              $password = "12345";
-              $dbname = "test";
+            //fill table with dynamic data based on database query
+            $servername = "localhost";
+            $username = "testuser";
+            $password = "12345";
+            $dbname = "test";
 
-              $db_link = mysqli_connect (
-                  $servername, $username, $password, $dbname
-                                  );
-              
-              $sql = "SELECT * FROM kittyspinny ORDER BY start DESC";
-              
-              $db_erg = mysqli_query( $db_link, $sql );
-              if ( ! $db_erg )
-              {
-                die('Ungültige Abfrage: ' . mysqli_error());
-              }
-                    while ($zeile = mysqli_fetch_array( $db_erg, MYSQLI_ASSOC))
-              {
-                echo "<tr>";
-                
-                echo "<td>". $zeile['revolutions'] . "</td>";
-                echo "<td>". $zeile['start'] . "</td>";
-                echo "<td>". $zeile['end'] . "</td>";
-                echo "<td>". $zeile['catId'] . "</td>";
-                echo "</tr>";
-              }
-              
-              
-              mysqli_free_result( $db_erg );
-              ?> 
+            $db_link = mysqli_connect (
+                $servername, $username, $password, $dbname
+            );
+            $sql = "SELECT * FROM kittyspinny ORDER BY start DESC";
+            
+            $db_erg = mysqli_query( $db_link, $sql );
+            if ( ! $db_erg ) {
+              die('Ungültige Abfrage: ' . mysqli_error());
+            }
+            while ($zeile = mysqli_fetch_array( $db_erg, MYSQLI_ASSOC))
+            {
+              echo "<tr>";
+              echo "<td>". $zeile['revolutions'] . "</td>";
+              echo "<td>". $zeile['start'] . "</td>";
+              echo "<td>". $zeile['end'] . "</td>";
+              echo "<td>". $zeile['catId'] . "</td>";
+              echo "</tr>";
+            }
+            mysqli_free_result( $db_erg );
+          ?> 
       </tbody>
     </table>
   </div>
 
   <script>
-$(document).ready( function () {
-    $('#cattable').DataTable();
-} );
-</script>
-    
-
-
-    
-         
-
+    //makes table a jquery datatable
+    $(document).ready( function () {
+      $('#cattable').DataTable();
+    });
+  </script>
 </body>
 </html>

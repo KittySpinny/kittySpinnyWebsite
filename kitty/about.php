@@ -1,3 +1,7 @@
+<!--
+	About page for kittySpinny, includes information about the project and future plans
+-->
+
 <?php
 session_start();
 include('navbar.php');
@@ -41,7 +45,7 @@ include('navbar.php');
           Thank you for your purchase! We hope you enjoy our website.
 
         <?php else: ?>
-          Our webstore is in maintenance at the moment, but please check back for KittySpinny buying options! Keep an eye on our progress <a href="./defaultMaintenance.php">here</a>
+          Our webstore is under maintenance at the moment, but please check back for KittySpinny buying options! Keep an eye on our progress <a href="./defaultMaintenance.php">here</a>
         <?php endif; ?>
 			</p>
 		</section>

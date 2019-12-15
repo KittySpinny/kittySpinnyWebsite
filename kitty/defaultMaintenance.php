@@ -1,3 +1,6 @@
+<!--
+  Generic redirect page  
+-->
 <!doctype html>
 <html>
 <?php

@@ -1,3 +1,8 @@
+<!--
+  Page for selecting which cat the user would like to view the statistics of
+  Currently using picture of sample cats for selection, saves selection as session variable
+-->
+
 <?php
 session_start();
 include('navbar.php')
@@ -37,14 +42,13 @@ include('navbar.php')
     </p>
   </div>
 
-
   <script>
+    //functions to save cat selection
     function setCat1() {
       $.post("./session.php", {
         "cat": 1
       })
       alert("Cat 1 selected.");
-
     }
 
     function setCat2() {
@@ -54,9 +58,5 @@ include('navbar.php')
       alert("Cat 2 selected.");
     }
   </script>
-
-
-
 </body>
-
 </html>

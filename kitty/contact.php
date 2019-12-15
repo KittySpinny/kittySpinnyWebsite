@@ -1,3 +1,7 @@
+<!--
+  Contact page with dummy contact information
+-->
+
 <!doctype html>
 <html>
 <?php

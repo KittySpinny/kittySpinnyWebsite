@@ -1,4 +1,3 @@
-
 <?php
 /**
  * We just want to hash our password using the current DEFAULT algorithm.
